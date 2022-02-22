@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../db/models');
+const { Users } = require('../db/models');
 const { noSessionChecker, haveSession } = require('../middlewares/auth');
 
 // Регистрация
@@ -14,29 +14,18 @@ router
     } = req.body;
 
     // Проверка есть ли такой юзер в БД
-    let userFound = await User.findOne({ where: { email } });
+    let userFound = await Users.findOne({ where: { email } });
 
     // Если юзер не найден, создаем его в БД и присваиваем сессию
     if (!userFound) {
-      userFound = await User.create({
+      userFound = await Users.create({
         name: username, email, password, role,
       });
       req.session.login = email; // устанавливаем сессию, привязанную к значению email
       res.locals.login = userFound.email; // устанавливем значение для hbs
       // return res.sendStatus(200).json();
-      // res.sendStatus(200)
-      
-    if (res.status === 200) {
-      alert('Вы успешно авторизовались на сайте и сейчас будете перенаправлены на главную');
-      window.location = '/';
-    } else {
-      alert('Вы ввели не правильный логин или пароль. Попробуйте еще раз.');
+      res.render('/');
     }
-    }
-
-
-    // Иначе отправляем 500 ошибку
-    return res.sendStatus(500).json();
   });
 
 // Авторизация
@@ -49,11 +38,11 @@ router
     const { username, password } = req.body;
 
     // Проверка есть ли такой юзер в БД
-    const userFound = await User.findOne({ name: username });
+    const userFound = await Users.findOne({ name: username });
 
     // Если юзер не найден, отправляем ошибку
     if (!userFound) {
-      return res.sendStatus(500).json();
+      return res.sendStatus(401).json();
     }
 
     // Проверяем верный пароль ввел юзер или нет
@@ -63,8 +52,8 @@ router
       return res.sendStatus(200).json();
     }
 
-    // Иначе отправляем 500 ошибку
-    return res.sendStatus(500).json();
+    // Иначе отправляем ошибку
+    return res.sendStatus(401).json();
   });
 
 // Выход из учетной записи
