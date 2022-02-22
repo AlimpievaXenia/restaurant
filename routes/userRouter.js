@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { User } = require('../db/models');
-// const { noSessionChecker, haveSession } = require('../middlewares/auth');
+const { Users } = require('../db/models');
+const { noSessionChecker, haveSession } = require('../middlewares/auth');
 
-// // Регистрация
-// router
+//// Регистрация
+//router
 //   .route('/signup')
 //   .get(haveSession, (req, res) => {
 //     res.render('signup', { title: 'РЕГИСТРАЦИЯ' });
@@ -13,17 +13,7 @@ const { User } = require('../db/models');
 //       username, email, password, role,
 //     } = req.body;
 
-//     // Проверка есть ли такой юзер в БД
-//     let userFound = await User.findOne({ where: { email } });
 
-//     // Если юзер не найден, создаем его в БД и присваиваем сессию
-//     if (!userFound) {
-//       userFound = await User.create({
-//         name: username, email, password, role,
-//       });
-//       req.session.login = email; // устанавливаем сессию, привязанную к значению email
-//       res.locals.login = userFound.email; // устанавливем значение для hbs
-//       // return res.sendStatus(200).json();
 //       // res.sendStatus(200)
 
 //       if (res.status === 200) {
@@ -38,6 +28,22 @@ const { User } = require('../db/models');
 //     return res.sendStatus(500).json();
 //   });
 
+    // Проверка есть ли такой юзер в БД
+    let userFound = await Users.findOne({ where: { email } });
+
+    // Если юзер не найден, создаем его в БД и присваиваем сессию
+    if (!userFound) {
+      userFound = await Users.create({
+        name: username, email, password, role,
+      });
+      req.session.login = email; // устанавливаем сессию, привязанную к значению email
+      res.locals.login = userFound.email; // устанавливем значение для hbs
+      // return res.sendStatus(200).json();
+      res.render('/');
+    }
+  });
+
+
 // // Авторизация
 // router
 //   .route('/signin')
@@ -47,13 +53,14 @@ const { User } = require('../db/models');
 //   .post(haveSession, async (req, res) => {
 //     const { username, password } = req.body;
 
-//     // Проверка есть ли такой юзер в БД
-//     const userFound = await User.findOne({ name: username });
 
-//     // Если юзер не найден, отправляем ошибку
-//     if (!userFound) {
-//       return res.sendStatus(500).json();
-//     }
+    // Проверка есть ли такой юзер в БД
+    const userFound = await Users.findOne({ name: username });
+
+    // Если юзер не найден, отправляем ошибку
+    if (!userFound) {
+      return res.sendStatus(401).json();
+    }
 
 //     // Проверяем верный пароль ввел юзер или нет
 //     if (userFound.password === password) {
@@ -62,9 +69,10 @@ const { User } = require('../db/models');
 //       return res.sendStatus(200).json();
 //     }
 
-//     // Иначе отправляем 500 ошибку
-//     return res.sendStatus(500).json();
-//   });
+
+    // Иначе отправляем ошибку
+    return res.sendStatus(401).json();
+  });
 
 // // Выход из учетной записи
 // router
