@@ -10,6 +10,10 @@ module.exports = {
       itemId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'Items',
+          key: 'id',
+        },
       },
       url: {
         type: Sequelize.STRING,
