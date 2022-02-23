@@ -10,7 +10,7 @@ router
   })
   .post(haveSession, async (req, res) => {
     const {
-      name, email, password, phone,
+      username, email, password, role,
     } = req.body;
 
     // Проверка есть ли такой юзер в БД
@@ -19,12 +19,24 @@ router
     // Если юзер не найден, создаем его в БД и присваиваем сессию
     if (!userFound) {
       userFound = await User.create({
-        name, email, password, phone,
+        name: username, email, password, role,
       });
       req.session.login = email; // устанавливаем сессию, привязанную к значению email
       res.locals.login = userFound.email; // устанавливем значение для hbs
-      res.redirect('/');
+      // return res.sendStatus(200).json();
+      // res.sendStatus(200)
+      
+    if (res.status === 200) {
+      alert('Вы успешно авторизовались на сайте и сейчас будете перенаправлены на главную');
+      window.location = '/';
+    } else {
+      alert('Вы ввели не правильный логин или пароль. Попробуйте еще раз.');
     }
+    }
+
+
+    // Иначе отправляем 500 ошибку
+    return res.sendStatus(500).json();
   });
 
 // Авторизация
@@ -34,14 +46,14 @@ router
     res.render('signin', { title: 'АВТОРИЗАЦИЯ' });
   })
   .post(haveSession, async (req, res) => {
-    const { name, password } = req.body;
+    const { username, password } = req.body;
 
     // Проверка есть ли такой юзер в БД
-    const userFound = await User.findOne({ name });
+    const userFound = await User.findOne({ name: username });
 
     // Если юзер не найден, отправляем ошибку
     if (!userFound) {
-      return res.sendStatus(401).json();
+      return res.sendStatus(500).json();
     }
 
     // Проверяем верный пароль ввел юзер или нет
@@ -51,16 +63,14 @@ router
       return res.sendStatus(200).json();
     }
 
-    // Иначе отправляем ошибку
-    return res.sendStatus(401).json();
+    // Иначе отправляем 500 ошибку
+    return res.sendStatus(500).json();
   });
 
 // Выход из учетной записи
 router
   .route('/logout')
   .get(noSessionChecker, async (req, res) => {
-    // console.log('noSessionChecker>>>')
-
     await req.session.destroy(); // удаляем сессию
     if (req.cookies.myCookie) {
       res.clearCookie('myCookie'); // удаляем куки

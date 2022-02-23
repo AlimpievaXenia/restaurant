@@ -1,15 +1,23 @@
 {
-  "development": 
-  {
-    "use_env_variable": "DB_URL"
+  "development": {
+    "username": "postgres",
+    "password": "123456",
+    "database": "ElDelivery",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
-    "use_env_variable": "DB_URL_TEST_DB"
+    "username": "postgres",
+    "password": "123456",
+    "database": "ElDelivery_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "production": {
-    "use_env_variable": "DB_URL_PRODUCTION_DB"
+    "username": "postgres",
+    "password": "123456",
+    "database": "ElDelivery _production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
 }
-
-
-
