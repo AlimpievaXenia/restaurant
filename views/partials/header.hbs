@@ -1,13 +1,43 @@
 <header>
-  <form>
-    <input type="text" name="text" class="textInInput" placeholder"искать">
-    <input type="submit" name="submit" class="submit" value="Search">
-    <button class="button"><span>Искать</span>
+  <div>
+
+    <nav role="navigation">
+      <div id="menuNav" />
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        {{#unless user}}
+        <li><a href="/user/signup">Зарегистрироваться</a></li>
+        <li><a href="/user/signin">Войти</a></li>
+        {{/unless}}
+
+        {{#if user}}
+        <li><a href="#">Главная</a></li>
+        <li><a href="/order">Сделать заказ</a></li>
+        <li><a href="/user/logout">Выйти</a></li>
+        {{/if}}
+    </nav>
+    <img class="logo" src="/assets/logo.png" width=100px height=100px>
+  </div>
+
+  <div>
+    <input type="text" name="text" class="textInInput" placeholder="Введите адрес доставки">
+    <img class="loupe" src="/assets/loupe.svg">
+    {{!-- <button class="button"><span>Искать</span>
+    </button> --}}
+  </div>
+
+  <div class="phone">
+    <p>
+      Контакты
+    </p>
+    +79234889135
+  </div>
+
+  <div>
+    <button class="basket"><span>Корзина</span>
     </button>
-  </form>
-  <div class="phone"></div>
-  <button class="button"><span>Корзина</span>
-  </button>
-  Добро пожаловать!
-  <hr />
+  </div>
 </header>
