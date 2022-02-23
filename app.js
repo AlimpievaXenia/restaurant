@@ -19,7 +19,6 @@ const checkDb = require('./helpers/checkDB');
 // Используем роуты
 app.use('/', indexRouter);
 app.use('/user', userRouter);
-// app.use('/nav', nav.router.js)
 
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
