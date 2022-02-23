@@ -7,6 +7,7 @@ const useErrorHandlers = require('./middlewares/error-handlers');
 // Подключаем миддлвэр и роуты
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
+const navRouter = require('./routes/navRouter');
 
 // Запускаем экспресс и пропускаем через миддлвэры
 const app = express();
@@ -19,6 +20,7 @@ const checkDb = require('./helpers/checkDB');
 // Используем роуты
 app.use('/', indexRouter);
 app.use('/user', userRouter);
+app.use('/nav', navRouter);
 
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
