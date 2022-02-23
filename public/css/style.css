@@ -1,4 +1,4 @@
-body {
+body, main {
   background: linear-gradient(to left, #211F20 20%, #44403F 80%);
 }
 
@@ -31,11 +31,15 @@ input {
   height: 40px;
 }
 
+.searchContainer {
+  position: relative;
+}
+
 .loupe {
   width: 20px;
   position: absolute;
-  left: 870px;
-  top: 50px;
+  right: 10px;
+  top: 12px;
 }
 
 .phone {
@@ -67,9 +71,9 @@ footer {
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 80px;
-  bottom: 10px;
   background: linear-gradient(to right, #44403F 30%, #211F20 70%);
+  height: 80px;
+  margin-top: -80px;
 }
 
 nav a {
@@ -92,10 +96,6 @@ nav a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
-}
-
-#menuNav a:hover {
-  color: tomato;
 }
 
 #menuNav input {
@@ -173,16 +173,155 @@ nav a {
   transform: none;
 }
 
+.orderCard {
+  display: flex;
+  flex-direction: column;
+  width: 1096px;
+  height: 450px;
+  margin: 80px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.basketTitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 30px;
+  height: 60px;
+  padding: 20px 30px;
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  height: 120px;
+  border-bottom: 1px solid #696969;
+}
+
+.item:nth-child(3) {
+  border-top: 1px solid #E1E8EE;
+  border-bottom: 1px solid #E1E8EE;
+}
+
+.imageOfSnack {
+  height: 80px;
+  width: 80px;
+}
+
+.titleOfSnack {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.dicription {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #A6A7AB;
+  font-size: 12px;
+}
+
+.ingredients {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 300;
+}
 
 
+.circle {
+  align-items: center;
+  background-color: #72A479;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
 
 
+button:focus,
+input:focus {
+  outline: 0;
+}
 
+.total {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  align-items: center;
+}
 
+.price {
+  font-size: 23px;
+  color: #FFFFFF;
+  font-weight: 300;
+}
 
+.addToOrder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 750px;
+  height: 200px;
+  margin: 100px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
 
+.addToOrderTitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 30px;
+  height: 60px;
+  padding: 20px 30px;
+  font-weight: 400;
+}
 
+.orderTotal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 100px;
+  margin: 100px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
 
 
 
@@ -419,14 +558,7 @@ nav a {
 
 
 
-
-
-
-
-
-
-
-
+/* 
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -438,9 +570,8 @@ body {
 }
 
 .navMenu {
-  background-color:linear-gradient(360deg, #211F20 0%, #44403F 100%);
+  background-color: linear-gradient(360deg, #211F20 0%, #44403F 100%);
   height: 78px;
-  /* z-index: 3; */
   position: fixed;
   left: -2px;
   top: calc(50% - 78px/2 - 1251.5px);
@@ -455,5 +586,4 @@ body {
 main {
   background-color: azure;
   height: 2000px;
-}
-
+} */
