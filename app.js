@@ -18,7 +18,7 @@ const app = express();
 useMiddleware(app);
 
 // Подключаемся к БД
-const { PORT } = process.env;
+const { PORT } = process.env ?? 3000;
 const checkDb = require('./helpers/checkDB');
 
 // Используем роуты

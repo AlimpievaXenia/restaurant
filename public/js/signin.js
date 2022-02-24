@@ -9,6 +9,8 @@ if (signiForm) {
 
     const res = await fetch('/user/signin', {
       method: 'POST',
+      credentials: 'include',
+      mode: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
       },
