@@ -34,10 +34,13 @@ router
     res.render('signin', { title: 'АВТОРИЗАЦИЯ' });
   })
   .post(haveSession, async (req, res) => {
-    const { name, password } = req.body;
+    const { email, password } = req.body;
 
     // Проверка есть ли такой юзер в БД
-    const userFound = await User.findOne({ name });
+    const userFound = await User.findOne({
+      where: { email },
+      raw: true,
+    });
 
     // Если юзер не найден, отправляем ошибку
     if (!userFound) {

@@ -8,21 +8,21 @@ const useErrorHandlers = require('./middlewares/error-handlers');
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const navRouter = require('./routes/navRouter');
-const scroll = require('./routes/scroll')
+const scroll = require('./routes/scroll');
 
 // Запускаем экспресс и пропускаем через миддлвэры
 const app = express();
 useMiddleware(app);
 
 // Подключаемся к БД
-const { PORT } = process.env;
+const { PORT } = process.env ?? 3000;
 const checkDb = require('./helpers/checkDB');
 
 // Используем роуты
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/nav', navRouter);
-app.use('/', scroll)
+app.use('/', scroll);
 
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
