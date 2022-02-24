@@ -3,14 +3,14 @@
 <div class="container">
   <div class="coldSnacks">
     {{#each coldSnacks}}
-      <div class="menu">
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-          <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+          <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -19,14 +19,14 @@
   </div>
   <div class="hotSnacks">
     {{#each hotSnacks}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -35,14 +35,14 @@
   </div>
   <div class="meatMeals">
     {{#each meatMeals}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -51,14 +51,14 @@
   </div>
   <div class="soups">
     {{#each soups}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -67,14 +67,14 @@
   </div>
   <div class="fishMeals">
     {{#each fishMeals}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -83,14 +83,14 @@
   </div>
   <div class="bbqMeals">
     {{#each bbqMeals}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -99,14 +99,14 @@
   </div>
   <div class="specialMeals">
     {{#each specialMeals}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}
@@ -115,14 +115,14 @@
   </div>
   <div class="drinks">
     {{#each drinks}}
-      <div>
-          <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
-           <ul>
-          <li>{{this.title}}</li>
-          <li>{{this.weight}}</li>
-          <li>{{this.ingredients}}</li>
-          <li>{{this.price}}</li>
-          <li><button id="basketBtn">В корзину</button></li>
+      <div data-itemid="{{this.id}}">
+        <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+           <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li>{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
           </ul>
           {{!-- <button id="minusBtn"> - </button>
           <button id="plusBtn"> + </button> --}}

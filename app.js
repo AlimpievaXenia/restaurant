@@ -8,6 +8,7 @@ const useErrorHandlers = require('./middlewares/error-handlers');
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const navRouter = require('./routes/navRouter');
+const basketRouter = require('./routes/basketRouter');
 
 // Запускаем экспресс и пропускаем через миддлвэры
 const app = express();
@@ -21,6 +22,7 @@ const checkDb = require('./helpers/checkDB');
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/nav', navRouter);
+app.use('/', basketRouter);
 
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
