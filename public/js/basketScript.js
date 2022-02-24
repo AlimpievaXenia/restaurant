@@ -1,5 +1,4 @@
 const mealUls = document.querySelectorAll('.meal-ul');
-console.log(mealUls);
 
 mealUls.forEach((meal) => {
   meal.addEventListener('click', async (e) => {
@@ -7,7 +6,7 @@ mealUls.forEach((meal) => {
       return;
     }
     const mealDiv = e.target.closest('.js-meal');
-    const mealId = mealDiv.dataset.mealid
+    const mealId = mealDiv.dataset.mealid;
     const liPrice = mealDiv.querySelector('.js-meal-price');
     const mealPrice = liPrice.innerText;
     const mealUl = mealDiv.querySelector('.meal-ul');
@@ -31,7 +30,7 @@ mealUls.forEach((meal) => {
     } catch (error) {
       console.log('Error:', error.message);
     }
-    console.log(jsonRes);
+    console.log(jsonRes); // счетчик
 
     if (!jsonRes) {
       return;
@@ -98,7 +97,7 @@ mealUls.forEach((meal) => {
       } catch (error) {
         console.log('Error:', error.message);
       }
-      console.log(answer);
+      console.log(answer); // счетчик
     });
   });
 });

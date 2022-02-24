@@ -3,7 +3,7 @@
   Корзина
 </div>
 <div class="orderCard">
-
+{{#each itemsToOrder}}
   <div class="item">
     <div class="container">
       <div>
@@ -39,7 +39,8 @@
 
     </div>
   </div>
-  <div class="item">
+  {{/each}}
+  {{!-- <div class="item">
     <div class="container">
       <div>
         <img class="imageOfSnack" src="/assets/menu.png" alt="">
@@ -74,8 +75,8 @@
 
     </div>
   </div>
-</div>
- 
+</div> --}}
+
 
 <div class="addToOrder">
   <div class="addToOrderTitle">
