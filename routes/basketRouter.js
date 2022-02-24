@@ -5,74 +5,132 @@ const { Item, BasketItem } = require('../db/models/index');
 const router = express.Router();
 
 router.post('/addtoBasket', noSessionChecker, async (req, res) => {
-  const itemId = req.body.id;
-  // console.log(itemId);
+  const { itemId } = req.body;
+  const { userId } = res.locals;
 
-  let item;
+  // let item;
+  // try {
+  //   item = await Item.findOne({
+  //     raw: true,
+  //     where: {
+  //       id: itemId,
+  //     },
+  //   });
+  // } catch (error) {
+  //   res
+  //     .status(500)
+  //     .render('error', { error: error.message });
+  //   return;
+  // }
+
   try {
-    item = await Item.findOne({
-      raw: true,
+    const basketItem = await BasketItem.create(
+      {
+        itemId,
+        userId,
+      },
+    );
+  } catch (error) {
+    res
+      .status(500)
+      .render('error', { error: error.message });
+    return;
+  }
+
+  try {
+    const count = await BasketItem.count(
+      {
+        where: {
+          itemId,
+          userId,
+        },
+      },
+    );
+    res.json({ count });
+  } catch (error) {
+    res
+      .status(500)
+      .render('error', { error: error.message });
+  }
+});
+
+router.delete('/removeFrBasket', noSessionChecker, async (req, res) => {
+  const itemId = req.body.id;
+  const { userId } = res.locals;
+  let oneItem;
+  try {
+    oneItem = await BasketItem.findOne({
       where: {
-        id: itemId,
+        userId,
+        itemId,
       },
     });
   } catch (error) {
     res
       .status(500)
       .render('error', { error: error.message });
-    return;
   }
-  // console.log(item);
-  console.log('====================>', res.locals.userId);
 
-  let basketItem;
   try {
-    basketItem = await BasketItem.create(
+    await BasketItem.destroy({
+      where: {
+        id: oneItem.id,
+      },
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .render('error', { error: error.message });
+  }
+
+  try {
+    const count = await BasketItem.count(
+      {
+        where: {
+          itemId,
+          userId,
+        },
+      },
+    );
+    res.json({ count });
+  } catch (error) {
+    res
+      .status(500)
+      .render('error', { error: error.message });
+  }
+});
+
+router.post('/basket/addOne', async (req, res) => {
+  const itemId = req.body.id;
+  const { userId } = res.locals;
+  try {
+    const basketItem = await BasketItem.create(
       {
         itemId,
-        userId: res.locals.userId,
+        userId,
       },
     );
   } catch (error) {
     res
       .status(500)
       .render('error', { error: error.message });
-    return;
   }
 
-  let all;
   try {
-    basketItem = await BasketItem.create(
+    const count = await BasketItem.count(
       {
-        itemId,
-        userId: res.locals.userId,
+        where: {
+          itemId,
+          userId,
+        },
       },
     );
-  } catch (error) {
-    res
-      .status(500)
-      .render('error', { error: error.message });
-    return;
-  }
-
-
-
-  res.json({ basketItem });
-});
-
-router.delete('/removeFrBasket', noSessionChecker, async (req, res) => {
-  const basketItemId = req.body.id;
-  try {
-    await BasketItem.destroy({ where: { id: basketItemId } });
+    res.json({ count });
   } catch (error) {
     res
       .status(500)
       .render('error', { error: error.message });
   }
-
-  res.json({ deleted: 'deleted' });
 });
-
-
 
 module.exports = router;
