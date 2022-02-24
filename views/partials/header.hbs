@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/header.css">
 <header>
   <div>
 
@@ -22,22 +23,20 @@
     <img class="logo" src="/assets/logo.png" width=100px height=100px>
   </div>
 
-  <div>
+  <div class="searchContainer">
     <input type="text" name="text" class="textInInput" placeholder="Введите адрес доставки">
     <img class="loupe" src="/assets/loupe.svg">
-    {{!-- <button class="button"><span>Искать</span>
-    </button> --}}
   </div>
 
   <div class="phone">
-    <p>
-      Контакты
-    </p>
+    Контакты<br>
     +79234889135
   </div>
 
   <div>
-    <button class="basket"><span>Корзина</span>
+    <button class="basket"><a href="/basket">
+    <span>Корзина</span>
+    </a>
     </button>
   </div>
 </header>
