@@ -8,6 +8,7 @@ const useErrorHandlers = require('./middlewares/error-handlers');
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const navRouter = require('./routes/navRouter');
+const cartRouter = require('./routes/cartRouter');
 const scroll = require('./routes/scroll');
 const basketRouter = require('./routes/basketRouter');
 
@@ -23,6 +24,7 @@ const checkDb = require('./helpers/checkDB');
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/nav', navRouter);
+app.use('/', cartRouter);
 app.use('/', scroll);
 app.use('/basket', basketRouter);
 
