@@ -8,21 +8,6 @@ router.post('/addtoBasket', noSessionChecker, async (req, res) => {
   const { itemId } = req.body;
   const { userId } = res.locals;
 
-  // let item;
-  // try {
-  //   item = await Item.findOne({
-  //     raw: true,
-  //     where: {
-  //       id: itemId,
-  //     },
-  //   });
-  // } catch (error) {
-  //   res
-  //     .status(500)
-  //     .render('error', { error: error.message });
-  //   return;
-  // }
-
   try {
     const basketItem = await BasketItem.create(
       {
