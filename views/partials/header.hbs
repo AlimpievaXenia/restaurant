@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/header.css">
 <header>
   <div>
 
@@ -8,12 +9,12 @@
       <span></span>
       <span></span>
       <ul id="menu">
-        {{#unless user}}
+        {{#unless login}}
         <li><a href="/user/signup">Зарегистрироваться</a></li>
         <li><a href="/user/signin">Войти</a></li>
         {{/unless}}
 
-        {{#if user}}
+        {{#if login}}
         <li><a href="#">Главная</a></li>
         <li><a href="/order">Сделать заказ</a></li>
         <li><a href="/user/logout">Выйти</a></li>
@@ -33,7 +34,9 @@
   </div>
 
   <div>
-    <button class="basket"><a href="/basket"></a><span>Корзина</span>
+    <button class="basket"><a href="/basket">
+    <span>Корзина</span>
+    </a>
     </button>
   </div>
 </header>

@@ -46,6 +46,7 @@ module.exports = function (app) {
   // Передаем сессии на все hbs
   app.use((req, res, next) => {
     res.locals.login = req.session?.login;
+    res.locals.userId = req.session?.userId;
     next();
   });
 

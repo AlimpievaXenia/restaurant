@@ -22,7 +22,10 @@ router
         name, email, password, phone,
       });
       req.session.login = email; // устанавливаем сессию, привязанную к значению email
+      req.session.userId = userFound.id;
       res.locals.login = userFound.email; // устанавливем значение для hbs
+      res.locals.userId = userFound.id; // фиксируем id юзера под переменной userId
+      console.log(res.locals.userId);
       res.redirect('/');
     }
   });
@@ -50,7 +53,10 @@ router
     // Проверяем верный пароль ввел юзер или нет
     if (userFound.password === password) {
       req.session.login = userFound.email; // устанавливаем сессию, привязанную к значению email (именно в этот момент создаются куки)
+      req.session.userId = userFound.id;
       res.locals.login = userFound.email; // устанавливем значение для hbs
+      res.locals.userId = userFound.id;
+      console.log(res.locals.userId);
       return res.sendStatus(200).json();
     }
 

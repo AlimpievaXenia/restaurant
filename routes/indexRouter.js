@@ -5,7 +5,3 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
-
-router.get('/basket', (req, res) => {
-  res.render('basket');
-});
