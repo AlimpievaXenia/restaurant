@@ -1,0 +1,13 @@
+footer {
+  border-top: 1px solid #696969;
+  margin-top: auto;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(to right, #44403F 30%, #211F20 70%);
+  height: 80px;
+}
+
+nav a {
+  font-size: 20px;
+  color: #DCDCDC;
+}
