@@ -9,6 +9,8 @@ const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const navRouter = require('./routes/navRouter');
 const cartRouter = require('./routes/cartRouter');
+const scroll = require('./routes/scroll');
+const basketRouter = require('./routes/basketRouter');
 
 // Запускаем экспресс и пропускаем через миддлвэры
 const app = express();
@@ -23,6 +25,8 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/nav', navRouter);
 app.use('/', cartRouter);
+app.use('/', scroll);
+app.use('/basket', basketRouter);
 
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
