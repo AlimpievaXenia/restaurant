@@ -7,9 +7,14 @@
     "use_env_variable": "DB_URL_TEST_DB"
   },
   "production": {
-    "use_env_variable": "DB_URL_PRODUCTION_DB"
+    "use_env_variable": "DB_URL_PRODUCTION_DB",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
-
 
 

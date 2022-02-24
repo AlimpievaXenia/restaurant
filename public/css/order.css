@@ -1,0 +1,215 @@
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 800px;
+  margin: 20px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.contactInformation {
+  size: 18px;
+  color: #FFFFFF;
+  margin: 30px;
+}
+
+.clientName, .phoneNumber {
+  height: 50px;
+  width: 310px;
+  font-size: 16px;
+}
+
+.nameNum {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 800px;
+  height: 90px;
+}
+
+.deliveryTitle {
+  size: 18px;
+  color: #FFFFFF;
+  margin: 30px;
+}
+
+.deliveryAdress {
+  size: 16px;
+  color: #FFFFFF;
+  margin: 30px;
+}
+
+.deliveryBox {
+  /* display: flex;
+  flex-direction: column; */
+  height: 456px;
+  width: 800px;
+  margin: 20px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.formDel {
+  width: 400px;
+  margin: 7.5px;
+}
+
+.deliveryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #72A479;
+  border-radius: 6px;
+}
+
+.wrap {
+  padding: 30px;
+}
+
+.deliveryContainer * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.deliveryContainer .deliveryBtn {
+  border-right: 2px solid #72A479;
+  overflow: hidden;
+}
+
+.deliveryContainer .deliveryBtn:last-child {
+  border-right: 0px;
+}
+
+.deliveryContainer .deliveryBtn.btn2 {
+  width: calc(50% - 1px);
+}
+
+.deliveryContainer .deliveryBtn.btn3 {
+  width: calc(33.3333% - 1.4px);
+}
+
+.deliveryContainer .deliveryBtn.btn4 {
+  width: calc(50% - 1px);
+}
+
+.deliveryContainer .deliveryBtn .labelDel {
+  background-color: transparent;
+  color: #7e7e7e;
+  display: block;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.deliveryContainer .deliveryBtn .deliv {
+  display: none;
+}
+
+.deliveryContainer .deliveryBtn .deliv:checked+.labelDel {
+  background-color: #72A479;
+  color: #fff;
+}
+
+.deliveryContainer .deliveryBtn:first-child .labelDel {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-left: 1px solid #b4b5b9;
+}
+
+.field {
+  margin: 7.5px;
+}
+
+.street {
+  width: 400px;
+  height: 50px;
+}
+
+.nHouse {
+  width: 130px;
+  height: 50px;
+}
+
+.nFlat {
+  width: 230px;
+  height: 50px;
+}
+
+.entrance, .floor {
+  width: 110px;
+  height: 50px;
+}
+
+.comment {
+  width: 550px;
+  height: 50px;
+}
+
+.formPay {
+  width: 600px;
+  margin: 7.5px;
+}
+
+.change, .addTime {
+  width: 180px;
+  height: 50px;
+}
+
+.personCount {
+  width: 250px;
+  height: 50px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  height: 249px;
+  width: 800px;
+  margin: 20px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.deliveryTime {
+  display: flex;
+  flex-direction: column;
+  height: 370px;
+  width: 800px;
+  margin: 20px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.agreement {
+  display: flex;
+
+  width: 800px;
+  margin: 20px auto;
+  background: #504B4A;
+  box-shadow: 0px 0px 6px 2px #FFFFFF50;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.callChoice {
+  list-style: none;
+}
+
+.callChoiceWrapper {
+  padding: unset;
+}

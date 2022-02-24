@@ -22,7 +22,10 @@ router
         name, email, password, phone,
       });
       req.session.login = email; // устанавливаем сессию, привязанную к значению email
+      req.session.userId = userFound.id;
       res.locals.login = userFound.email; // устанавливем значение для hbs
+      res.locals.userId = userFound.id; // фиксируем id юзера под переменной userId
+      console.log(res.locals.userId);
       res.redirect('/');
     }
   });
@@ -34,10 +37,13 @@ router
     res.render('signin', { title: 'АВТОРИЗАЦИЯ' });
   })
   .post(haveSession, async (req, res) => {
-    const { name, password } = req.body;
+    const { email, password } = req.body;
 
     // Проверка есть ли такой юзер в БД
-    const userFound = await User.findOne({ name });
+    const userFound = await User.findOne({
+      where: { email },
+      raw: true,
+    });
 
     // Если юзер не найден, отправляем ошибку
     if (!userFound) {
@@ -47,7 +53,10 @@ router
     // Проверяем верный пароль ввел юзер или нет
     if (userFound.password === password) {
       req.session.login = userFound.email; // устанавливаем сессию, привязанную к значению email (именно в этот момент создаются куки)
+      req.session.userId = userFound.id;
       res.locals.login = userFound.email; // устанавливем значение для hbs
+      res.locals.userId = userFound.id;
+      console.log(res.locals.userId);
       return res.sendStatus(200).json();
     }
 
