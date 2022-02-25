@@ -7,14 +7,12 @@
   <div class="item">
     <div class="container">
       <div>
-        <img class="imageOfSnack" src="/assets/menu.png" alt="">
+        <img class="imageOfSnack" src="{{'Photos.url'}}" alt="">
       </div>
 
       <div class="ingredients">
-        <span class="titleOfSnack">Ягнёнок</span>
-        <span class="dicription">помидор, сыр фета, масло подсолнечное, капуста пекинская, перец сладкий красный,
-          огурцы,
-          оливки без косточек</span>
+        <span class="titleOfSnack">{{this.title}}</span>
+        <span class="dicription">{{this.ingredients}}</span>
       </div>
     </div>
 
@@ -29,8 +27,8 @@
     </div>
 
     <div class="total">
-      <span class="price">259
-        <span class="price">₽</span>
+      <span class="price">{{this.price}}
+
       </span>
       <div class="circle">
 
@@ -39,10 +37,11 @@
 
     </div>
   </div>
+  {{/each}}
 </div>
 
 
-
+{{!--
 <div class="addToOrderTitle">
   Добавить к заказу
 </div>
@@ -77,6 +76,4 @@
       </span>
     </button>
   </div>
-</div>
-
-<script src="/js/basket.js"></script>
+</div> --}}
