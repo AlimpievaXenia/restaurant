@@ -32,6 +32,10 @@
 //   calcFn('minus');
 // });
 
-// plus.addEventListener('click', () => {
-//   calcFn('plus');
-// });
+// // minus.addEventListener('click', () => {
+// //   calcFn('minus');
+// // });
+
+// // plus.addEventListener('click', () => {
+// //   calcFn('plus');
+// // });
