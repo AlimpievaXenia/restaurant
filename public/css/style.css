@@ -2,7 +2,32 @@ body, main {
   background: linear-gradient(to left, #211F20 20%, #44403F 80%);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 3747px;
+  width: 1440px;
+}
+
+.mainImage {
+  position: relative;
+  z-index: 0;
+}
+
+.mainImg {
+  left: 347px;
+  position: relative;
+}
+
+.mainImgCnt {
+  z-index: 1;
+  position: absolute;
+  width: 812px;
+  height: 485px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
+}
+
+.imgText {
+  position: absolute;
+  z-index: 2;
+  padding: 65px;
 }
 
 .content-container {
@@ -12,115 +37,152 @@ body, main {
 
 .coldSnacks {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.coldSnacks div {
+.line {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.coldSnacks .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
   border-radius: 10px;
 }
 
 .hotSnacks {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.hotSnacks div {
+.hotSnacks .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .soups {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.soups div {
+.soups .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .meatMeals {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.meatMeals div {
+.meatMeals .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .fishMeals {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.fishMeals div {
+.fishMeals .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .bbqMeals {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.bbqMeals div {
+.bbqMeals .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .specialMeals {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.specialMeals div {
+.specialMeals .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 .drinks {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
 
-.drinks div {
+.drinks .js-meal {
   margin: 10px;
-  width: 30%;
+  height: 385px;
+  width: 325px;
   text-align: center;
-  background-color: #696969;
+  background-color: #504B4A;
+  box-shadow: 0px 0px 6px 2px #292525;
+  border-radius: 10px;
 }
 
 /* ============== */
@@ -146,6 +208,10 @@ body, main {
   transform: translate(-50%, -50%);
 }
 
+.product li {
+  padding-top: 15px;
+}
+
 .params {
   display: flex;
 }
@@ -156,6 +222,11 @@ body, main {
 
 .btn {
   margin: 10px;
+  background: linear-gradient(to right, #618967, #72A479);
+  border-radius: 10px;
+  font-size: 15px;
+  /* height: 40px;
+width: 70px; */
 }
 
 .product-content {
@@ -225,5 +296,131 @@ ul {
 .map {
   height: 600px;
   background-image: url('/map/Снимок экрана от 2022-02-24 19-38-03.png');
-  /* background-image: inherit; */
+  display: flex;
+  justify-content: space-around;
+  /* text-align: justify; */
+  vertical-align: middle;
+  position: relative
+}
+
+.token {
+  width: 0;
+  height: 0;
+  border-top: 70px solid #72A479;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translate(0, -50%)
+}
+
+.info-card {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  transform: translate(0, -50%);
+  background-color: #494544;
+  border-radius: 20px;
+}
+
+.bron {
+  display: flex;
+  font-size: 50px;
+}
+
+.marker {
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.marker::before {
+  color: rgb(34, 214, 27);
+  content: "⊙   ";
+}
+
+.mail-marker {
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.mail-marker::before {
+  color: rgb(34, 214, 27);
+  content: "✉  ";
+}
+
+.phone {
+  color: #000;
+  font-size: 16px;
+  /* font-weight: 900;  */
+}
+
+.phone a {
+  color: #000;
+  font-size: 35px;
+  /* font-weight: 900; */
+}
+
+.bron {
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+article {
+  font-size: 32px;
+  color: #FFFFFF;
+  font-style: bold;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.imageBottom {
+  width: 1363px;
+  height: 610px;
+  position: relative;
+  padding: 40px;
+}
+
+.imgBottom {
+  left: 347px;
+  position: relative;
+  width: 1012px;
+  height: 610px;
+}
+
+.mainImgCntBottom {
+  z-index: 1;
+  position: absolute;
+  width: 812px;
+  height: 611px;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
+}
+
+.imgTextBottom {
+  position: absolute;
+  z-index: 2;
+  margin-left: 65px;
+  margin-top: 197px;
+}
+
+.bron::before {
+  color: rgb(34, 214, 27);
+  content: "☏   ";
+}
+
+.soc {
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.soc::before {
+  color: rgb(34, 214, 27);
+  content: "웃   ";
 }

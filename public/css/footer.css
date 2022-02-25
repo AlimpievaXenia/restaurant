@@ -1,5 +1,8 @@
 footer {
   border-top: 1px solid #696969;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin-top: auto;
   text-align: center;
   width: 100%;
