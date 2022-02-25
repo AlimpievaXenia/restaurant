@@ -155,7 +155,7 @@ body, main {
 }
 
 .btn {
-margin: 10px;
+  margin: 10px;
 }
 
 .product-content {
@@ -167,12 +167,12 @@ margin: 10px;
   list-style-type: none;
 }
 
-.product{
-background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
-border-radius: 10px;
-color: aliceblue;
-height: 80%;
-width: 60%;
+.product {
+  background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+  border-radius: 10px;
+  color: aliceblue;
+  height: 80%;
+  width: 60%;
 }
 
 ul {
@@ -190,14 +190,14 @@ ul {
 
 .li {
   display: flex;
-justify-content: center;
-color: aliceblue;
+  justify-content: center;
+  color: aliceblue;
 
 }
 
 .li-title {
   font-size: 40px;
-  list-style-type: none ;
+  list-style-type: none;
 }
 
 .li-title::before {
@@ -223,6 +223,7 @@ color: aliceblue;
 }
 
 .map {
-  height: 600px;nav24 19-38-03.png')
-/* background-image: inherit; */
+  height: 600px;
+  background-image: url('/map/Снимок экрана от 2022-02-24 19-38-03.png');
+  /* background-image: inherit; */
 }

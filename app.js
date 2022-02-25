@@ -32,7 +32,6 @@ app.use('/basket', basketRouter);
 app.use('/product_card', productRouter);
 app.use('/order', orderRouter);
 
-
 // Если ни один из роутов не сработал, показываем ошибки
 useErrorHandlers(app);
 
