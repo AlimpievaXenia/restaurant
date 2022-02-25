@@ -1,40 +1,165 @@
-<link rel="stylesheet" href="/css/nav.css">
-<nav class="navMenu">
-  <div class="navigation">
-    <ul class="menu">
-      <li class="cokdSnack">
-        <a href="#part1" class="cold-snack" data-active="false" data-type="primary">Холодные закуски</a>
-      </li>
-       <li class="hotSnack">
-        <a href="#part2" class="hot-snack" data-active="false" data-type="primary">Горячие закуски</a>
-      </li>
-       <li class="meatDishes">
-        <a href="#part3" class="meat-dishes" data-active="false" data-type="primary">Мясные блюда</a>
-      </li>
-       <li class="soupMenu">
-        <a href="#part4" class="soup" data-active="false" data-type="primary">Супы</a>
-      </li>
-       <li class="fishDishes">
-        <a href="#part5" class="fish-dishes" data-active="false" data-type="primary">Рыбные блюда</a>
-      </li>
-       <li class="grillMenu">
-        <a href="#part6" class="grill-menu" data-active="false" data-type="primary">Гриль меню</a>
-      </li>
-       <li class="specialDishes">
-        <a href="#part7" class="special" data-active="false" data-type="primary">Фирменные блюда</a>
-      </li>
-       <li class="drinkMenu">
-        <a href="#part8" class="drink" data-active="false" data-type="primary">Напитки</a>
-      </li>
-    </ul>
+<link rel="stylesheet" href="/css/footer.css">
+<div class="mainImage">
+  <img class="imgText" src="/assets/textImg.png">
+  <div class="mainImgCnt">
   </div>
-</nav>
-{{!-- Нужно будет вставить в верстке, там где будут блоки с этими разделами, по нажатию на раздел сверху будет искать id и переходить на этот блок --}}
-<article id="part1">Холодные закуски</article>
-<article id="part2">Горячие закуски</article>
-<article id="part3">Мясные блюда</article>
-<article id="part4">Супы</article>
-<article id="part5">Рыбные блюда</article>
-<article id="part6">Гриль меню</article>
-<article id="part7">Фирменные блюда</article>
-<article id="part8">Напитки</article>
+  <img class="mainImg" src="/assets/main.png">
+</div>
+<div>
+  <nav class="navMenu">
+    <div class="navigation">
+      <ul class="menu">
+        {{#each categories}}
+        <a href="#part{{this.id}}" data-active="false" data-type="primary">{{this.title}}</a>
+        {{/each}}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content-container">
+    <div class="container">
+      <div class="coldSnacks">
+        <article id="part1">Холодные закуски</article>
+        <div class="line">
+          {{#each coldSnacks}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="hotSnacks">
+        <article id="part2">Горячие закуски</article>
+        <div class="line">
+          {{#each hotSnacks}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="meatMeals">
+        <article id="part3">Мясные блюда</article>
+        <div class="line">
+          {{#each meatMeals}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="soups">
+        <article id="part4">Супы</article>
+        <div class="line">
+          {{#each soups}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="fishMeals">
+        <article id="part5">Рыбные блюда</article>
+        <div class="line">
+          {{#each fishMeals}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="bbqMeals">
+        <article id="part6">Гриль меню</article>
+        <div class="line">
+          {{#each bbqMeals}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="specialMeals">
+        <article id="part7">Фирменные блюда</article>
+        <div class="line">
+          {{#each specialMeals}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="drinks">
+        <article id="part8">Напитки</article>
+        <div class="line">
+          {{#each drinks}}
+          <div data-mealid="{{this.id}}" class="js-meal">
+            <img style="height: 200px; width: 200px" src="{{'Photos.url'}}" alt=""><br>
+            <ul class="meal-ul">
+              <li>{{this.title}}</li>
+              <li>{{this.weight}}</li>
+              <li>{{this.ingredients}}</li>
+              <li class="js-meal-price">{{this.price}}</li>
+              <li><button id="basketBtn" class="btnClass">В корзину</button></li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imageBottom">
+    <img class="imgTextBottom" src="/assets/textBottom.png">
+    <div class="mainImgCntBottom">
+    </div>
+    <img class="imgBottom" src="/assets/mainBottom.png">
+  </div>
+</div>
