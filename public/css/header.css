@@ -58,13 +58,18 @@ input {
   background: linear-gradient(to right, #618967, #72A479);
   border-radius: 10px;
   height: 40px;
-  width: 70px;
-  right: 30px;
+  width: 149px;
+  right: 52px;
+}
+
+.textBasket {
+  font-size: 14px;
+  color:#FFFFFF
 }
 
 #menuNav {
   display: block;
-  position: absolute;
+  position: relative;
   top: 50px;
   left: 50px;
   z-index: 1;
@@ -133,7 +138,7 @@ input {
   position: absolute;
   opacity: 0.8;
   width: 185px;
-  margin: -81px 0 0 -50px;
+  margin: -84px 0 0 -60px;
   padding: 50px;
   padding-top: 125px;
   background: #ededed;
