@@ -1,5 +1,5 @@
-// const minuses = document.querySelector('.minus');
-// const pluses = document.querySelectorAll('.plus');
+// const minus = document.querySelector('.minus');
+// const plus = document.querySelectorAll('.plus');
 // const input = document.querySelector('.counter');
 // const price = document.querySelector('.price');
 
@@ -21,21 +21,21 @@
 //   }
 // }
 
-// Array.from(pluses).forEach((plus) => {
-//   plus.addEventListener('click', (e) => {
-//     console.log(e);
-//     calcFn('plus');
-//   });
-// });
-
-// minus.addEventListener('click', () => {
-//   calcFn('minus');
-// });
+// // Array.from(pluses).forEach((plus) => {
+// //   plus.addEventListener('click', (e) => {
+// //     console.log(e);
+// //     calcFn('plus');
+// //   });
+// // });
 
 // // minus.addEventListener('click', () => {
 // //   calcFn('minus');
 // // });
 
-// // plus.addEventListener('click', () => {
-// //   calcFn('plus');
-// // });
+// minus.addEventListener('click', () => {
+//   calcFn('minus');
+// });
+
+// plus.addEventListener('click', () => {
+//   calcFn('plus');
+// });
