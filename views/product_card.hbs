@@ -6,30 +6,30 @@
           <img src='photos/IMG_2187.JPG' alt=""><br>
         </ul>
         <ul>
-          <li>{{this.title}} 1</li>
-          <li>{{this.ingredients}} 2</li>
-          <li>Вес: {{this.weight}} 3</li>
+          <li>{{this.title}} КАРТОФЕЛЬ С СЕЛЬДЬЮ</li>
+          <li>{{this.ingredients}} с маринованным луком, зеленью и творожным сыром</li>
+          <li>Вес: {{this.weight}} 320г</li>
           <li class="basketAndPrice">
             <button class="btn" id="basketBtn">В корзину</button>
-            <p>{{this.price}} 4</p>
+            <p>{{this.price}} 370₽</p>
           </li>
           <li>
             <div class="params">
               <ul>
                 <li>Белки</li>
-                <li>{{this.proteins}} 5</li>
+                <li>{{this.proteins}} 4.12</li>
               </ul>
               <ul>
                 <li>Жиры</li>
-                <li>{{this.fats}} 6</li>
+                <li>{{this.fats}} 20.73</li>
               </ul>
               <ul>
                 <li>Углеводы</li>
-                <li>{{this.carbs}} 7</li>
+                <li>{{this.carbs}} 3.56</li>
               </ul>
               <ul>
                 <li>Ккал</li>
-                <li>{{this.calories}} 8</li>
+                <li>{{this.calories}} 550</li>
               </ul>
             </div>
           </li>
@@ -46,13 +46,26 @@
         </div>
       </div>
       <div class="map">
-          <ul class="">
-            <li>11111111111111111111</li>
-            <li>22222222222222222</li>
-            <li>3333333333333333333</li>
-            <li>44444444444444444444</li>
-          </ul>
-
-        {{!-- <img style="height: 600px; width: 1000px " src='/map/Снимок экрана от 2022-02-24 19-38-03.png' alt=""><br> --}}
+        <div>
+          <div class="info-card">
+            <ul>
+            <li class="marker">Наш адрес: Москва ул.Самойлова д.10</li>
+            <li class="mail-marker">Наша почта: <a style="color: azure;" href="elbrus@bootcamp.com">elbrus@foodcamp.com</a></li>
+            {{!-- <li class="bron-marker"> --}}
+              <li class="bron">
+                <button class="btn" id="basketBtn">Забронировать стол</button>
+                <p class=phone><a href="tel:88005553535">8 (800) 555-35-35</a></p>
+              </li>
+            {{!-- </li> --}}
+            <li class="soc">Мы в соцюсетях: </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="token">
+            <p>Мы Тут</p>
+          </div>
+          {{!-- <div class="tokenap"></div> --}}
+        </div>
       </div>
 </div>

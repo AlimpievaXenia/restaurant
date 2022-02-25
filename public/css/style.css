@@ -208,6 +208,10 @@ body, main {
   transform: translate(-50%, -50%);
 }
 
+.product li {
+  padding-top: 15px;
+}
+
 .params {
   display: flex;
 }
@@ -217,7 +221,13 @@ body, main {
 }
 
 .btn {
-  margin: 10px;
+
+margin: 10px;
+background: linear-gradient(to right, #618967, #72A479);
+border-radius: 10px;
+font-size: 15px;
+/* height: 40px;
+width: 70px; */
 }
 
 .product-content {
@@ -284,6 +294,77 @@ ul {
   width: 300px;
 }
 
+.map {
+  height: 600px;
+  background-image: url('/map/Снимок экрана от 2022-02-24 19-38-03.png');
+  display: flex;
+  justify-content: space-around;
+  /* text-align: justify; */
+  vertical-align: middle;
+  position: relative
+}
+
+.token {
+  width: 0;
+  height: 0;
+  border-top: 70px solid #72A479;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  position: absolute;              
+   top: 40%;
+   left: 80%;                         
+   transform: translate(0, -50%)
+}
+.info-card {
+  position: absolute;              
+  top: 70%;
+  left: 5%;                         
+  transform: translate(0, -50%);
+  background-color: #494544;
+  border-radius: 20px;
+}
+
+.bron {
+  display: flex;
+  font-size: 50px;
+}
+
+.marker {
+  font-size: 30px;
+  list-style-type: none ;
+}
+
+.marker::before {
+  color: rgb(34, 214, 27);
+  content: "⊙   ";
+}
+
+.mail-marker {
+  font-size: 30px;
+  list-style-type: none ;
+}
+
+.mail-marker::before {
+  color: rgb(34, 214, 27);
+  content: "✉  ";
+}
+
+.phone {
+	color: #000;
+	font-size: 16px;
+	/* font-weight: 900;  */
+}
+.phone a {
+	color: #000;
+	font-size: 35px;
+	/* font-weight: 900; */
+}
+
+.bron {
+  font-size: 30px;
+  list-style-type: none ;
+=======
 /* .map {
   height: 600px;nav24 19-38-03.png')
 background-image: inherit;
@@ -331,3 +412,17 @@ article {
   margin-left: 65px;
   margin-top: 197px;
 }
+
+.bron::before {
+  color: rgb(34, 214, 27);
+  content: "☏   ";
+}
+
+.soc {
+  font-size: 30px;
+  list-style-type: none ;
+}
+
+.soc::before {
+  color: rgb(34, 214, 27);
+  content: "웃   ";
