@@ -28,6 +28,10 @@
 //   });
 // });
 
+// minus.addEventListener('click', () => {
+//   calcFn('minus');
+// });
+
 // // minus.addEventListener('click', () => {
 // //   calcFn('minus');
 // // });
