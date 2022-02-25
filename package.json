@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
-    "start": "nodemon app.js",
-    "dev": "nodemon app.js --ignore sessions"
+    "start": "node app.js",
+    "dev": "nodemon app.js --ignore sessions",
+    "prod": "NODE_ENV=production node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,10 @@
   },
   "homepage": "https://github.com/AlimpievaXenia/Elbrus-restaurant#readme",
   "dependencies": {
+    "connect-redis": "^6.1.1",
     "cookie-parser": "^1.4.6",
+    "core-js": "^3.21.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
@@ -27,6 +34,7 @@
     "morgan": "^1.10.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
+    "redis": "^3.1.2",
     "roboto-fontface": "^0.10.0",
     "sequelize": "^6.16.2",
     "session-file-store": "^1.5.0"

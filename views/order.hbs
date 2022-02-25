@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/css/order.css">
+<script src="/js/order.js"></script>
+<span>Оформление заказа</span>
+<div class="orderForm">
+  <div class="contactInfo">
+    <span class="contactInformation">1.Контактная информация</span>
+    <div class="nameNum">
+      <input type="text" class="clientName" name="name" placeholder="Имя">
+      <input type="text" class="phoneNumber" name="phone" placeholder="Телефон">
+    </div>
+  </div>
+  <div class="deliveryBox">
+    <div class="wrap">
+      <span class="deliveryTitle">2.Доставка</span>
+      <form class="formDel">
+        <div class="deliveryContainer">
+          <div class="containerItem deliveryBtn btn2">
+            <input class="deliv" type="radio" name="option" id="buttonDelivery" checked>
+            <label class="labelDel" for="buttonDelivery">Доставка</label>
+          </div>
+          <div class="containerItem deliveryBtn btn2">
+            <input class="deliv" type="radio" name="option" id="buttonSelf">
+            <label class="labelDel" for="buttonSelf">Самовывоз</label>
+          </div>
+        </div>
+      </form>
+
+      <span class="deliveryAdress">Адрес доставки</span>
+      <div>
+        <input type="text" class="street field" name="street" placeholder="Укажите улицу">
+        <input type="text" class="nHouse field" name="phone" placeholder="Номер дома">
+      </div>
+      <input type="text" class="nFlat field" name="name" placeholder="№ квартиры/офиса">
+      <input type="text" class="entrance field" name="phone" placeholder="Подъезд">
+      <input type="text" class="floor field" name="name" placeholder="Этаж">
+      <input type="text" class="comment field" name="phone" placeholder="Комментарий">
+    </div>
+  </div>
+
+  <div class="payment">
+    <div class="wrap">
+      <span>3.Оплатить</span>
+      <form class="formPay">
+        <div class="deliveryContainer">
+          <div class="containerItem deliveryBtn btn3">
+            <input class="deliv" type="radio" name="option1" id="online" checked>
+            <label class="labelDel" for="online">Онлайн-оплата</label>
+          </div>
+          <div class="containerItem deliveryBtn btn3">
+            <input class="deliv" type="radio" name="option1" id="byCard">
+            <label class="labelDel" for="byCard">Курьеру картой</label>
+          </div>
+          <div class="containerItem deliveryBtn btn3">
+            <input class="deliv" type="radio" name="option1" id="cash">
+            <label class="labelDel" for="cash">Наличными</label>
+          </div>
+        </div>
+      </form>
+      <input type="text" class="change field" name="name" placeholder="Сдача с">
+    </div>
+  </div>
+
+  <div class="deliveryTime">
+    <div class="wrap">
+      <span>4.Когда доставить</span>
+      <form class="formDel">
+        <div class="deliveryContainer">
+          <div class="containerItem deliveryBtn btn4">
+            <input class="deliv" type="radio" name="option" id="shortDelivery" checked>
+            <label class="labelDel" for="shortDelivery">В ближайшее время</label>
+          </div>
+          <div class="containerItem deliveryBtn btn4">
+            <input class="deliv" type="radio" name="option" id="inTime">
+            <label class="labelDel" for="inTime">Ко времени</label>
+          </div>
+        </div>
+      </form>
+      <input type="text" class="addTime field" name="name" placeholder="Укажите время">
+      <input type="text" class="personCount field" name="name" placeholder="Количество персон">
+      <ul class="callChoiceWrapper">
+        <li class="callChoice">
+          <input class="noCall" type="radio">
+          Не перезванивать
+        </li>
+        <li class="call">
+          <input class="operatorCall" type="radio">
+          Потребуется звонок оператора
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="agreement">
+    <div class="wrap">
+      <p>Я согласен на обработку моих перс. данных в соответствии с Условиями</p>
+    </div>
+  </div>
+</div>

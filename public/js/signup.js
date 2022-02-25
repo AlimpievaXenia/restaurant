@@ -10,8 +10,10 @@ if (signupForm) {
 
     // console.log(username, email, password);
 
-    const res = await fetch('/user/signup', {
+    const res = await ('/user/signup', {
       method: 'POST',
+      credentials: 'include',
+      mode: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
       },

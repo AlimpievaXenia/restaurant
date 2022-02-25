@@ -1,40 +1,58 @@
 <div class="product_card">
-  <div class="product">
-    <div>
+  {{Item}}
+  <div class="product-content">
       <div class="product">
         <ul>
-          <a href="http://"></a>
+          <img src='photos/IMG_2187.JPG' alt=""><br>
         </ul>
         <ul>
-          <li>this.title</li>
-          <li>this.ingredients</li>
-          <li>Вес: this.weight</li>
-          <li class="basket">
-            <button>Корзина</button>
-            <p>this.price</p>
+          <li>{{this.title}} 1</li>
+          <li>{{this.ingredients}} 2</li>
+          <li>Вес: {{this.weight}} 3</li>
+          <li class="basketAndPrice">
+            <button class="btn" id="basketBtn">В корзину</button>
+            <p>{{this.price}} 4</p>
           </li>
           <li>
-            <div>
+            <div class="params">
               <ul>
                 <li>Белки</li>
-                <li>this.proteins</li>
+                <li>{{this.proteins}} 5</li>
               </ul>
               <ul>
                 <li>Жиры</li>
-                <li>this.fats</li>
+                <li>{{this.fats}} 6</li>
               </ul>
               <ul>
                 <li>Углеводы</li>
-                <li>this.carbs</li>
+                <li>{{this.carbs}} 7</li>
               </ul>
               <ul>
                 <li>Ккал</li>
-                <li>this.calories</li>
+                <li>{{this.calories}} 8</li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
-    </div>
   </div>
+  <div class="li"><li class="li-title">С этим товаром покупают</li></div>
+      <div class="other">
+        <div class="other-img">
+          <img src='/photos/IMG_2187.JPG' alt=""><br>
+          <img src='/photos/IMG_1973.JPG' alt=""><br>
+          <img src='/photos/IMG_1973.JPG' alt=""><br>
+          <img src='/photos/IMG_1973.JPG' alt=""><br>
+        </div>
+      </div>
+      <div class="map">
+          <ul class="">
+            <li>11111111111111111111</li>
+            <li>22222222222222222</li>
+            <li>3333333333333333333</li>
+            <li>44444444444444444444</li>
+          </ul>
+
+        {{!-- <img style="height: 600px; width: 1000px " src='/map/Снимок экрана от 2022-02-24 19-38-03.png' alt=""><br> --}}
+      </div>
 </div>

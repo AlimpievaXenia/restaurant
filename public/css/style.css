@@ -4,3 +4,225 @@ body, main {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.content-container {
+  background-color: #44403F;
+  color: white;
+}
+
+.coldSnacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.coldSnacks div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+  border-radius: 10px;
+}
+
+.hotSnacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.hotSnacks div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.soups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.soups div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.meatMeals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.meatMeals div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.fishMeals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.fishMeals div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.bbqMeals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.bbqMeals div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.specialMeals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.specialMeals div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+.drinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.drinks div {
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  background-color: #696969;
+}
+
+/* ============== */
+.container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.container li {
+  list-style-type: none;
+}
+
+.product {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.params {
+  display: flex;
+}
+
+.basketAndPrice {
+  display: flex;
+}
+
+.btn {
+margin: 10px;
+}
+
+.product-content {
+  position: relative;
+  height: 400px;
+}
+
+.product li {
+  list-style-type: none;
+}
+
+.product{
+background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+border-radius: 10px;
+color: aliceblue;
+height: 80%;
+width: 60%;
+}
+
+ul {
+  padding-right: 20px;
+}
+
+.params {
+  margin-top: 30px;
+}
+
+.params ul {
+  padding-left: 0px;
+  padding-right: 50px;
+}
+
+.li {
+  display: flex;
+justify-content: center;
+color: aliceblue;
+
+}
+
+.li-title {
+  font-size: 40px;
+  list-style-type: none ;
+}
+
+.li-title::before {
+  color: rgb(34, 214, 27);
+  content: "|   ";
+}
+
+.other-img {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+.other-img img {
+  height: 220px;
+  width: 220px;
+  margin: 0.5%;
+}
+
+.product ul img {
+  height: 100%;
+  width: 300px;
+}
+
+.map {
+  height: 600px;nav24 19-38-03.png')
+/* background-image: inherit; */
+}
