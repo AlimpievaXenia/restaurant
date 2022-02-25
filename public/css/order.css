@@ -39,7 +39,7 @@
 .deliveryTitle {
   size: 18px;
   color: #FFFFFF;
-  margin: 30px;
+  margin: 30px
 }
 
 .deliveryAdress {
@@ -49,8 +49,6 @@
 }
 
 .deliveryBox {
-  /* display: flex;
-  flex-direction: column; */
   height: 456px;
   width: 800px;
   margin: 20px auto;
@@ -62,6 +60,7 @@
 
 .formDel {
   width: 400px;
+  padding: 20px;
   margin: 7.5px;
 }
 
@@ -142,17 +141,17 @@
 }
 
 .nFlat {
-  width: 230px;
+  width: 240px;
   height: 50px;
 }
 
 .entrance, .floor {
-  width: 110px;
+  width: 130px;
   height: 50px;
 }
 
 .comment {
-  width: 550px;
+  width: 555px;
   height: 50px;
 }
 
@@ -183,6 +182,12 @@
   transform-style: preserve-3d;
 }
 
+.payTitle, .delContName, .textAgr, .callChoice, .call {
+  size: 18px;
+  color: #FFFFFF;
+  margin: 30px
+}
+
 .deliveryTime {
   display: flex;
   flex-direction: column;
@@ -197,7 +202,6 @@
 
 .agreement {
   display: flex;
-
   width: 800px;
   margin: 20px auto;
   background: #504B4A;
@@ -206,7 +210,7 @@
   transform-style: preserve-3d;
 }
 
-.callChoice {
+.callChoice, .call {
   list-style: none;
 }
 
